@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+    transition:
+      background-color 0.25s ease,
+      color 0.25s ease;
+  }
+
+  /* =============================================================
+     1. GLOBAL BASE & BACKGROUND OVERRIDES
+     ============================================================= */
+
+  /* Light Mode Base Background & Global Text Color */
+  html.light body,
+  html.light .bg-slate-950,
+  html.light .min-h-screen.bg-slate-950 {
+    background-color: #f8fafc !important; /* slate-50 */
+    color: #0f172a !important; /* slate-900 */
+  }
+
+  /* Dark Mode Base Background & Global Text Color */
+  html.dark body,
+  html.dark .bg-slate-950,
+  html.dark .min-h-screen.bg-slate-950 {
+    background-color: #090d16 !important; /* Deep Premium Midnight */
+    color: #f8fafc !important; /* slate-50 */
+  }
+
+  /* Universal Inherit for typography */
+  html.light p,
+  html.light span,
+  html.light div {
+    color: inherit;
+  }
+
+  /* =============================================================
+     2. NAVBAR & HERO SECTION (Light Mode Fixes)
+     ============================================================= */
+
+  /* Navbar Backdrop in Light Mode */
+  html.light nav.bg-slate-950\/80,
+  html.light .backdrop-blur-xl {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  /* Hero Section Background in Light Mode */
+  html.light section.from-indigo-900\/30 {
+    background-image: radial-gradient(
+      ellipse at top,
+      rgba(224, 231, 255, 0.6),
+      #f8fafc,
+      #f8fafc
+    ) !important;
+  }
+
+  /* Search Bar Container in Light Mode */
+  html.light form.bg-slate-900\/90 {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08) !important;
+  }
+
+  html.light form input {
+    color: #0f172a !important;
+  }
+
+  html.light form input::placeholder {
+    color: #94a3b8 !important;
+  }
+
+  /* =============================================================
+     3. CARDS, CONTAINERS & SECTIONS
+     ============================================================= */
+
+  /* Prompts Cards, Leaderboard & Review Cards in Light Mode */
+  html.light .bg-slate-900\/60,
+  html.light .bg-slate-900\/80,
+  html.light .bg-slate-900\/30 {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 4px 15px -2px rgba(15, 23, 42, 0.04) !important;
+  }
+
+  /* Card Hover States in Light Mode */
+  html.light .hover\:border-slate-700:hover {
+    border-color: #cbd5e1 !important;
+  }
+
+  /* Secondary Neutral Buttons inside Cards */
+  html.light .bg-slate-800\/80 {
+    background-color: #f1f5f9 !important;
+    color: #1e293b !important;
+  }
+
+  html.light .bg-slate-800\/80:hover {
+    background-color: #4f46e5 !important; /* Changes to Primary Indigo on Hover */
+    color: #ffffff !important;
+  }
+
+  /* Dark Mode Containers */
+  html.dark .bg-slate-900\/60,
+  html.dark .bg-slate-900\/80 {
+    background-color: #0f172a !important;
+    border-color: #1e293b !important;
+  }
+
+  /* =============================================================
+     4. TYPOGRAPHY & TEXT COLOUR CONTRAST
+     ============================================================= */
+
+  /* Primary Headings in Light Mode */
+  html.light h1,
+  html.light h2,
+  html.light h3,
+  html.light h4,
+  html.light .text-white {
+    color: #0f172a !important;
+  }
+
+  /* Secondary Subtitles & Descriptions in Light Mode */
+  html.light .text-slate-400 {
+    color: #475569 !important; /* slate-600 */
+  }
+
+  html.light .text-slate-300 {
+    color: #334155 !important; /* slate-700 */
+  }
+
+  html.light .text-slate-500 {
+    color: #64748b !important; /* slate-500 */
+  }
+
+  /* Hover states for Navigation text in Light Mode */
+  html.light .hover\:text-white:hover {
+    color: #4f46e5 !important;
+  }
+
+  /* Dynamic Accent Colors */
+  html.light .text-indigo-400 {
+    color: #4f46e5 !important;
+  }
+  html.light .text-purple-400 {
+    color: #7c3aed !important;
+  }
+  html.light .text-amber-400 {
+    color: #d97706 !important;
+  }
+
+  /* =============================================================
+     5. GRADIENT BUTTONS & TEXT (Fixed Mismatches)
+     ============================================================= */
+
+  /* Multi-color Gradient Text Titles (e.g. "Battle-Tested AI Prompts") */
+  html.light .bg-clip-text {
+    background-image: linear-gradient(
+      to right,
+      #4f46e5,
+      #7c3aed,
+      #db2777
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
+
+  /* Register & Primary Gradient Buttons in Light Mode */
+  html.light .bg-gradient-to-r.from-indigo-600.to-purple-600,
+  html.light button.bg-gradient-to-r {
+    background-image: linear-gradient(to right, #4f46e5, #7c3aed) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.35) !important;
+  }
+
+  /* Ensure button children stay white */
+  html.light button.bg-gradient-to-r *,
+  html.light .bg-gradient-to-r * {
+    color: #ffffff !important;
+  }
+
+  /* =============================================================
+     6. PILLS, TAGS & BADGES (Light Mode Fixes)
+     ============================================================= */
+
+  /* Pill Tags (e.g., #ChatGPT-4o, #Midjourney) in Light Mode */
+  html.light .bg-slate-900\/80.border-slate-800 {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    color: #334155 !important;
+  }
+
+  /* Top Badge (e.g. "The #1 Marketplace...") */
+  html.light .bg-indigo-950\/80 {
+    background-color: #eef2ff !important;
+    border-color: #c7d2fe !important;
+    color: #3730a3 !important;
+  }
+
+  /* Platform Badges (ChatGPT, Midjourney, Premium) */
+  html.light .bg-emerald-950\/80 {
+    background-color: #ecfdf5 !important;
+    color: #047857 !important;
+    border-color: #a7f3d0 !important;
+  }
+
+  html.light .bg-purple-950\/80 {
+    background-color: #f3e8ff !important;
+    color: #6b21a8 !important;
+    border-color: #e9d5ff !important;
+  }
+
+  html.light .bg-amber-950\/90 {
+    background-color: #fffbeb !important;
+    color: #b45309 !important;
+    border-color: #fde68a !important;
+  }
+
+  /* Feature Card Icon Boxes */
+  html.light .bg-indigo-950 {
+    background-color: #eef2ff !important;
+    border-color: #c7d2fe !important;
+  }
+  html.light .bg-purple-950 {
+    background-color: #f3e8ff !important;
+    border-color: #e9d5ff !important;
+  }
+  html.light .bg-amber-950 {
+    background-color: #fffbeb !important;
+    border-color: #fde68a !important;
+  }
+
+  /* =============================================================
+     7. BORDERS & SHADOWS
+     ============================================================= */
+
+  html.light .border-slate-800,
+  html.light .border-slate-800\/60,
+  html.light .border-slate-800\/80 {
+    border-color: #e2e8f0 !important;
+  }
+}
