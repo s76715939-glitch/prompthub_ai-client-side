@@ -19,7 +19,8 @@ export default defineConfig(() => {
               configureServer(server: any) {
                 server.middlewares.use(async (req: any, res: any, next: any) => {
                   try {
-                    const serverModule = await import('./server/app.js');
+                    const serverPathRel = './server/app.js';
+                    const serverModule = await import(/* @vite-ignore */ serverPathRel);
                     const app = serverModule.default;
                     app(req, res, next);
                   } catch (err) {
