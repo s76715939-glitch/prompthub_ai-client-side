@@ -76,7 +76,7 @@ export const PromptCard = ({ prompt, onBookmark, isBookmarked = false, onNavigat
                 }}
                 className={`p-1.5 rounded-lg border backdrop-blur-md transition-colors ${
                   isBookmarked
-                    ? 'bg-amber-500 text-slate-950 border-amber-400'
+                    ? 'bg-slate-900/60 text-slate-300 border-amber-400'
                     : 'bg-slate-950/80 text-slate-300 border-slate-800 hover:text-white'
                 }`}
                 title={isBookmarked ? 'Remove Bookmark' : 'Bookmark Prompt'}
