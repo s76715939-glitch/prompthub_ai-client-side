@@ -34,7 +34,7 @@ export const PromptCard = ({ prompt, onBookmark, isBookmarked = false, onNavigat
     <motion.div
       whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
-      className="group relative bg-slate-900/60 dark:bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl transition-all"
+      className="group relative bg-slate-900/90 text-slate-400 border border-slate-800/80 hover:border-slate-700 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl transition-all"
     >
       {/* Thumbnail Banner Image */}
       <div className="relative h-44 w-full overflow-hidden bg-slate-950">
