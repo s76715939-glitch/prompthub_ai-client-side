@@ -124,7 +124,7 @@ export const Register = ({ navigate }) => {
 
         <div className="relative flex items-center justify-center">
           <div className="border-t border-slate-800 w-full"></div>
-          <span className="bg-slate-900 px-3 text-[11px] text-slate-500 uppercase font-medium absolute">or sign up with email</span>
+          <span className="bg-slate-900/60 px-3 text-[11px] text-slate-300 uppercase font-medium absolute">or sign up with email</span>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
