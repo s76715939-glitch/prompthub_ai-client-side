@@ -246,14 +246,3 @@
     border-color: #e2e8f0 !important;
   }
 }
-
-* =============================================================
-   8. CUSTOM FIXES FOR SMALL LABELS / BADGES
-   ============================================================= */
-
-/* Light Mode Fix for bg-slate-900 + text-slate-500 combo */
-html.light .bg-slate-900.text-slate-500 {
-  background-color: #ffffff !important; /* হালকা সাদা ব্যাকগ্রাউন্ড */
-  color: #0f172a !important; /* কালো টেক্সট */
-  border: 1px solid #e2e8f0 !important; /* subtle border for clarity */
-}
